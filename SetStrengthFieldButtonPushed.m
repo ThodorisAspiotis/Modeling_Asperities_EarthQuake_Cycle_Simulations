@@ -508,7 +508,7 @@ for ii = 1 : size(app.StrgthParasPerSectn,1)
                 TempStps  = 300;
                 TempVals  = linspace(minTemp,maxTemp,TempStps) +app.FricGeoThermStartTemp_EditField.Value;
                 AmB_Vals  = zeros(size(TempVals));
-                %-----------------------------------
+                
                 if     (AmBshape == 1)
                     AmB_Vals = app.AmBparabolic(TempVals);
                 elseif (AmBshape == 2)
@@ -524,7 +524,7 @@ for ii = 1 : size(app.StrgthParasPerSectn,1)
                         end
                     end
                 end
-                %-----------------------------------
+                
                 NegAmBvals        = AmB_Vals(AmB_Vals< 0);
                 MeanAmBseis(ii,1) = mean(NegAmBvals);
             end
@@ -722,7 +722,7 @@ for ii = 1 : size(app.StrgthParasPerSectn,1)
                 TempStps  = 300;
                 TempVals  = linspace(minTemp,maxTemp,TempStps) +app.FricGeoThermStartTemp_EditField.Value;
                 AmB_Vals  = zeros(size(TempVals));
-                %-----------------------------------
+                
                 if     (AmBshape == 1)
                     AmB_Vals = app.AmBparabolic(TempVals);
                 elseif (AmBshape == 2)
@@ -738,7 +738,7 @@ for ii = 1 : size(app.StrgthParasPerSectn,1)
                         end
                     end
                 end
-                %-----------------------------------
+                
                 NegAmBvals        = AmB_Vals(AmB_Vals< 0);
                 MeanAmBseis(ii,1) = mean(NegAmBvals);
             end
@@ -761,7 +761,7 @@ AmBshape    = app.StrgthParasPerSectn( get(app.Manual_Strength2.a1,'value') ,9);
 
 
                 TempAtDepth = -Geotherm*Depth +app.FricGeoThermStartTemp_EditField.Value;
-                %------------------------------------
+                
                 if (UseAmB == 1)
                     if     (AmBshape == 1)
                         AmB_Val = app.AmBparabolic(TempAtDepth);
@@ -909,7 +909,7 @@ for ii = 1 : size(app.StrgthParasPerSectn,1)
                 TempStps  = 300;
                 TempVals  = linspace(minTemp,maxTemp,TempStps) +app.FricGeoThermStartTemp_EditField.Value;
                 AmB_Vals  = zeros(size(TempVals));
-                %-----------------------------------
+                
                 if     (AmBshape == 1)
                     AmB_Vals = app.AmBparabolic(TempVals);
                 elseif (AmBshape == 2)
@@ -925,7 +925,7 @@ for ii = 1 : size(app.StrgthParasPerSectn,1)
                         end
                     end
                 end
-                %-----------------------------------
+                
                 NegAmBvals        = AmB_Vals(AmB_Vals< 0);
                 MeanAmBseis(ii,1) = mean(NegAmBvals);
             end
